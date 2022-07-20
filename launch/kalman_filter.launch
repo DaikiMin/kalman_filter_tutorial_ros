@@ -1,0 +1,9 @@
+<launch>
+
+    <include file="$(find kalman_filter_tutorial_ros)/launch/virtual_environment.launch"/>
+    <group ns = "kalman_filter_tutorial_ros">
+        <node pkg="kalman_filter_tutorial_ros" type="kalman_filter_tutorial_ros_tracker" name="tracker" output="screen">
+        </node>
+    </group>
+    <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure"/>
+</launch>

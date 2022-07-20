@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="rviz" type="rviz" name="rviz" args= "-d $(find kalman_filter_tutorial_ros)/config/rviz/virtual_environment.rviz"/>
+    <group ns = "kalman_filter_tutorial_ros">
+        <node pkg="kalman_filter_tutorial_ros" type="kalman_filter_tutorial_ros_virtual_environment" name="virtual_environment" output="screen">
+        </node>
+    </group>
+    <!-- <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard" launch-prefix="xterm -font r16 -bg darkblue -e"> -->
+    <!-- </node>  -->
+</launch>
